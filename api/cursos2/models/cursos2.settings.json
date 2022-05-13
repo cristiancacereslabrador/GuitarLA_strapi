@@ -1,0 +1,44 @@
+{
+  "kind": "collectionType",
+  "collectionName": "cursos2",
+  "info": {
+    "name": "Cursos2",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "imagenes": {
+      "collection": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false,
+      "pluginOptions": {}
+    },
+    "fecha_inicio": {
+      "type": "date",
+      "required": true
+    },
+    "fecha_fin": {
+      "type": "date",
+      "required": true
+    },
+    "descripcion": {
+      "type": "text",
+      "required": true
+    },
+    "costo": {
+      "type": "integer",
+      "required": true
+    }
+  }
+}
